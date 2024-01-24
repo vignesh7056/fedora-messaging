@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.3.1
+    rev: v3.15.0
     hooks:
       - id: pyupgrade
         args:
@@ -8,24 +8,24 @@ repos:
           - --keep-mock
 
   - repo: https://github.com/psf/black
-    rev: 23.3.0
+    rev: 23.12.1
     hooks:
       - id: black
         args: ["--check", "--diff", "-t", "py36"]
 
   - repo: https://github.com/pycqa/flake8
-    rev: 6.0.0
+    rev: 7.0.0
     hooks:
       - id: flake8
 
   - repo: https://github.com/pycqa/isort
-    rev: 5.12.0
+    rev: 5.13.2
     hooks:
       - id: isort
         args: ["-c", "--df"]
 
   - repo: https://github.com/PyCQA/bandit
-    rev: 1.7.5
+    rev: 1.7.7
     hooks:
       - id: bandit
         args: ["-ll", "-x", "*/tests/*"]
@@ -33,7 +33,7 @@ repos:
         require_serial: true
 
   - repo: https://github.com/myint/rstcheck
-    rev: v6.1.2
+    rev: v6.2.0
     hooks:
       - id: rstcheck
         exclude: "news/_template.rst"
